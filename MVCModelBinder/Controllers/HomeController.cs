@@ -1,4 +1,6 @@
-﻿using System;
+﻿using MVCModelBinder.Binders;
+using MVCModelBinder.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -26,5 +28,15 @@ namespace MVCModelBinder.Controllers
 
             return View();
         }
+        public void PostData([ModelBinder(typeof(PersonaModelBinder))] Persona person)
+        {
+
+        }
+
+        public ActionResult PersonaModelBinder()
+        {
+            return View();
+        }
+
     }
 }

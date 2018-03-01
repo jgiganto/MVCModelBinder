@@ -1,0 +1,36 @@
+﻿
+@{
+    ViewBag.Title = "PersonaModelBinder";
+}
+
+<h2>PersonaModelBinder</h2>
+<div>
+    @Html.BeginForm("PostData", "Home")
+    {
+    <table>
+        <tr>
+            <td>Nombre : </td>
+            <td>@Html.TextBox("nombre")</td>
+        </tr>
+        <tr>
+            <td>Apellido : </td>
+            <td>@Html.TextBox("primerapellido")</td>
+        </tr>
+        <tr>
+            <td>Segundo apellido :</td>
+            <td> @Html.TextBox("segundoapellido")</td>
+        </tr>
+        <tr>
+            <td>Edad:</td>
+            <td> @Html.TextBox("edad") </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <input type="submit" name="Save" value="Save" />
+            </td>
+        </tr>
+    </table>
+    }
+</div>
+
